@@ -1,0 +1,4 @@
+// This is the idea behind the DB Controller of Getting Overlapping Slots.
+
+new_start < existing_end
+AND new_end   > existing_start;

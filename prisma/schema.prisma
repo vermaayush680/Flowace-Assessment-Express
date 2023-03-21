@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Sport_Schedule {
+  id        Int      @id @default(autoincrement())
+  user_id   Int
+  name      String   @db.VarChar(100)
+  startTime String   @db.VarChar(255)
+  endTime   String   @db.VarChar(255)
+  date      String   @db.VarChar(255)
+  createdAt DateTime @db.Timestamp(0)
+  updatedAt DateTime @db.Timestamp(0)
+  user      User     @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "sport_schedule_ibfk_1")
+
+  @@index([user_id], map: "user_id")
+}
+
+model User {
+  id             Int              @id @default(autoincrement())
+  name           String           @db.VarChar(100)
+  email          String           @unique(map: "email") @db.VarChar(255)
+  password       String           @db.VarChar(255)
+  createdAt      DateTime         @db.Timestamp(0)
+  updatedAt      DateTime         @db.Timestamp(0)
+  sport_schedule Sport_Schedule[]
+}
