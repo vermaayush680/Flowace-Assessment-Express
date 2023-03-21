@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "58d8b6ec-1679-416a-8f5b-c9333c873920",
+		"name": "Flowace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26324517"
+	},
+	"item": [
+		{
+			"name": "Create Schedule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.ew.NT_k8ys_ukmEawavg2xZqtjfKhgi4wLAH-CrCcndzH8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ayush\",\r\n    \"email\":\"abc@123.com\",\r\n    \"startTime\":\"01:00\",\r\n    \"endTime\":\"02:00\",  \r\n    \"date\":\"2023-03-21\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/sport-schedule/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"sport-schedule",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.ew.NT_k8ys_ukmEawavg2xZqtjfKhgi4wLAH-CrCcndzH8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ayush\",\r\n    \"email\": \"abcdq@gmail.com\",\r\n    \"password\": \"1345fds234\",\r\n    \"createdAt\": \"2023-03-20T15:56:18.000Z\",\r\n    \"updatedAt\": \"2023-03-20T15:56:18.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/user/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Schedules by UserId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.ew.NT_k8ys_ukmEawavg2xZqtjfKhgi4wLAH-CrCcndzH8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/sport-schedule/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"sport-schedule",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate JWT Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/generateToken",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"generateToken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
