@@ -122,7 +122,7 @@ npx jest schedule.js
 ```
 
 .env file:
-
+```
 PORT = 3001
 
 JWT_SECRET = "flowacetestsecret"
@@ -136,3 +136,4 @@ JWT_PAYLOAD = {
 }
 
 TOKEN = eyJhbGciOiJIUzI1NiJ9.ew.NT_k8ys_ukmEawavg2xZqtjfKhgi4wLAH-CrCcndzH8
+```
